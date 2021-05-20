@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> 첫번재 jsp - kikkic </h1>
-
+<form action = "15form-method2.jsp" method = "post">
+	아이디 : <input type="text" name = "id"><br>
+	암호 : <input type="password" name = "pw"><br>
+	<input type="submit" value ="로그인">
+</form>
 </body>
 </html>

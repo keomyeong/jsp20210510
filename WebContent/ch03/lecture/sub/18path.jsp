@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1> 첫번재 jsp - kikkic </h1>
-
+<h1>18파일</h1>
 </body>
 </html>

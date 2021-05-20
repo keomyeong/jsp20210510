@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<%
+String str = "java";
+%>
+<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
 <title>Insert title here</title>
 </head>
 <body>
-<h1> 첫번재 jsp - kikkic </h1>
-
+<%= str %>
 </body>
 </html>

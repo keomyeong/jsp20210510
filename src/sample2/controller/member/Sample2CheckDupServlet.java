@@ -1,6 +1,6 @@
 package sample2.controller.member;
 
-import java.io.IOException;		
+import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,26 +29,34 @@ public class Sample2CheckDupServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-				response.getWriter().append("Served at: ").append(request.getContextPath());
-			}
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
 
-			/**
-			 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-			 */
-			protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				String id = request.getParameter("id");
-				
-				// System.out.println(id);
-				
-				MemberDao dao = new MemberDao();
-				
-				response.setContentType("text/plain; charset=utf-8");
-				if (dao.existsId(id)) {
-					response.getWriter().append("not ok");
-				} else {
-					response.getWriter().append("ok");
-				}
-				
-			}
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		
+		// System.out.println(id);
+		
+		MemberDao dao = new MemberDao();
+		
+		response.setContentType("text/plain; charset=utf-8");
+		if (dao.existsId(id)) {
+			response.getWriter().append("not ok");
+		} else {
+			response.getWriter().append("ok");
 		}
+		
+	}
+
+}
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ package sample2.bean;
 
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 
 public class Board {
 	private int id;

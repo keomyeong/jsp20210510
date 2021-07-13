@@ -1,14 +1,14 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="s2" tagdir="/WEB-INF/tags/sample2"%>
 
-<%@ taglib prefix = "c" uri ="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix = "s2" tagdir="/WEB-INF/tags/sample2" %>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
 <title>Insert title here</title>
 <script>
@@ -53,6 +53,12 @@
 	<s2:message></s2:message>
 </div>
 
+<div>
+작성한 게시물 : <span>${member.numberOfBoard }</span>개
+<br>
+작성한 댓글 : <span>${member.numberOfComment }</span>개
+</div>
+
 <div class="container">
 	<form id="form2" action="${pageContext.request.contextPath}/sample2/member/remove" method="post">
 		<input id="submit2" type="submit" value="탈퇴">
@@ -60,4 +66,3 @@
 </div>
 </body>
 </html>
-

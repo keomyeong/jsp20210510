@@ -1,6 +1,7 @@
 package sample2.controller.board;
 
-import java.io.IOException;	
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,46 +39,58 @@ public class Sample2BoardModifyServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		// request parameter 수집
-				String boardId = request.getParameter("boardId");
-				String title = request.getParameter("title");
-				String body = request.getParameter("body");
-				
-				// db에서 게시물 조회
-				BoardDao dao = new BoardDao();
-				BoardDto board = dao.get2(Integer.parseInt(boardId));
-				
-				// 로그인 된 유저정보
-				Member member = (Member) request.getSession().getAttribute("userLogined");
-				
-				// 로그인유저와 게시물작성자가 같은지
-				if (board.getMemberId().equals(member.getId())) {
-					// 같은면 수정 
-					BoardDto newBoard = new BoardDto();
-					newBoard.setBoardId(Integer.parseInt(boardId));
-					newBoard.setTitle(title);
-					newBoard.setBody(body);
-					
-					boolean ok = dao.modify(newBoard);
-					
-					// 메세지 남기기
-					if (ok) {
-						request.getSession().setAttribute("message", "수정되었습니다.");
-					} else {
-						request.getSession().setAttribute("message", "수정시 오류 발생");
-					}
-					
-				} else {
-					// 메세지 남기기
-					request.getSession().setAttribute("message", "작성자가 아닙니다.");
-					
-				}
-				String path = request.getContextPath() 
-						+ "/sample2/board/detail?id=" + boardId;
-				response.sendRedirect(path);
-				
-				
-				
+		String boardId = request.getParameter("boardId");
+		String title = request.getParameter("title");
+		String body = request.getParameter("body");
+		
+		// db에서 게시물 조회
+		BoardDao dao = new BoardDao();
+		BoardDto board = dao.get2(Integer.parseInt(boardId));
+		
+		// 로그인 된 유저정보
+		Member member = (Member) request.getSession().getAttribute("userLogined");
+		
+		// 로그인유저와 게시물작성자가 같은지
+		if (board.getMemberId().equals(member.getId())) {
+			// 같은면 수정 
+			BoardDto newBoard = new BoardDto();
+			newBoard.setBoardId(Integer.parseInt(boardId));
+			newBoard.setTitle(title);
+			newBoard.setBody(body);
+			
+			boolean ok = dao.modify(newBoard);
+			
+			// 메세지 남기기
+			if (ok) {
+				request.getSession().setAttribute("message", "수정되었습니다.");
+			} else {
+				request.getSession().setAttribute("message", "수정시 오류 발생");
 			}
-
+			
+		} else {
+			// 메세지 남기기
+			request.getSession().setAttribute("message", "작성자가 아닙니다.");
+			
 		}
+		String path = request.getContextPath() 
+				+ "/sample2/board/detail?id=" + boardId;
+		response.sendRedirect(path);
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

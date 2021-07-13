@@ -1,6 +1,7 @@
 package sample2.controller.board;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,7 +14,7 @@ import sample2.bean.Member;
 import sample2.dao.BoardDao;
 
 /**
- * Servlet implementation class Sample2WriteServlet
+ * Servlet implementation class Sample2BoardWriteServlet
  */
 @WebServlet("/sample2/board/write")
 public class Sample2BoardWriteServlet extends HttpServlet {
@@ -63,3 +64,14 @@ public class Sample2BoardWriteServlet extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+

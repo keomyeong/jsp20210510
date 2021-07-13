@@ -1,6 +1,7 @@
 package sample2.controller.member;
 
-import java.io.IOException;				
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,16 +13,16 @@ import sample2.bean.Member;
 import sample2.dao.MemberDao;
 
 /**
- * Servlet implementation class Sample2LoginServlet
+ * Servlet implementation class Sample2LogInServlet
  */
 @WebServlet("/sample2/member/login")
-public class Sample2LoginServlet extends HttpServlet {
+public class Sample2LogInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Sample2LoginServlet() {
+    public Sample2LogInServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,7 +46,7 @@ public class Sample2LoginServlet extends HttpServlet {
 		
 		MemberDao dao = new MemberDao();
 		Member member = dao.getMember(id);
-	
+		
 		if (member != null && member.getPassword().equals(password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("userLogined", member);
@@ -59,3 +60,12 @@ public class Sample2LoginServlet extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+

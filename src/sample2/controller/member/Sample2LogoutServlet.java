@@ -1,6 +1,7 @@
 package sample2.controller.member;
 
-import java.io.IOException;		
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -30,6 +31,10 @@ public class Sample2LogoutServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		session.invalidate();
 	
+		session = request.getSession();
+		
+		session.setAttribute("message", "로그아웃되었습니다.");
+		
 		String path = request.getContextPath() + "/sample2/main";
 		response.sendRedirect(path);
 	}

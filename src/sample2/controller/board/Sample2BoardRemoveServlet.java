@@ -1,21 +1,17 @@
 package sample2.controller.board;
 
-import java.io.IOException;	
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import sample2.bean.Member;
 import sample2.dao.BoardDao;
-import sample2.dao.MemberDao;
-import sample2.bean.Board;
-import sample2.bean.BoardDto;
 
 /**
- * Servlet implementation class Sample2BoardRemoveServlet
+ * Servlet implementation class Sample2BoardRemove
  */
 @WebServlet("/sample2/board/remove")
 public class Sample2BoardRemoveServlet extends HttpServlet {
@@ -61,3 +57,13 @@ public class Sample2BoardRemoveServlet extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+

@@ -8,9 +8,16 @@
 </head>
 <body>
 <%
-int number = 10;
+	int number = 10;
 %>
-<%@ include file = "/ch07/textbook/includee.jspf" %>
-공통변수 DATAFOLDER = "<%= dataFolder %>"
+
+<%@ include file="/ch07/textbook/includee.jspf" %>
+
+공통변수 DATAFOLDER="<%= dataFolder %>"
 </body>
 </html>
+
+
+
+
+

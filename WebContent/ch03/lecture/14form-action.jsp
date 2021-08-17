@@ -8,10 +8,15 @@
 </head>
 <body>
 <h3>action attribute</h3>
+
 <form action="14form-action2.jsp">
-	이름 : <input name = "name" type = "text"><br>
-	나이 : <input name = "age" type = "number"><br>
-	<input type = "submit">
+	이름 : <input name="name" type="text"> <br>
+	나이 : <input name="age" type="number"> <br>
+	<input type="submit">
 </form>
 </body>
 </html>
+
+
+
+

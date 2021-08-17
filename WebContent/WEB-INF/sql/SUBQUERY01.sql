@@ -35,3 +35,11 @@ WHERE BirthDate < '1952-02-19';
 
 SELECT * FROM Employees
 WHERE BirthDate < (SELECT BirthDate FROM Employees WHERE EmployeeID = 2);
+
+
+
+
+
+
+
+

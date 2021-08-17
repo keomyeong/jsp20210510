@@ -9,15 +9,21 @@
 <body>
 <h1>form</h1>
 <form>
-<input name = "q" type = "text">
-<br>
-<input name = "age" type = "text">
-<br>
-<input type = "submit" value = "send">
+	<input name="q" type="text">
+	<br>
+	<input name="age" type="text">
+	<br>
+	<input type="submit" value="send">
 </form>
-<hr>
-<p><%= request.getParameter("q") %></p>
-<p><%= request.getParameter("age") %></p>
 
-</body> 
+<hr>
+
+<p><%= request.getParameter("q") %> </p>
+<p><%= request.getParameter("age") %> </p>
+</body>
 </html>
+
+
+
+
+

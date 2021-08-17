@@ -1,6 +1,8 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "java.util.*" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+
 <% request.setCharacterEncoding("utf-8"); %>
+
 <%
 Cookie cookie = new Cookie("my-cookie9", "my-value9");
 cookie.setPath(request.getContextPath());
@@ -21,3 +23,7 @@ response.addCookie(cookie);
 </div>
 </body>
 </html>
+
+
+
+

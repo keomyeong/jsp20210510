@@ -1,6 +1,6 @@
 package sample2.controller.member;
 
-import java.io.IOException;		
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -55,5 +55,3 @@ public class Sample2ListServlet extends HttpServlet {
 	}
 
 }
-
-

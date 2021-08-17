@@ -1,6 +1,6 @@
 package sample2.filter;
 
-import java.io.IOException;	
+import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -10,17 +10,17 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 /**
- * Servlet Filter implementation class RequestCharSetFrilter
+ * Servlet Filter implementation class RequestCharSetFilter
  */
 //@WebFilter("/RequestCharSetFilter")
 public class RequestCharSetFilter implements Filter {
 
-  /**
-   * Default constructor. 
-   */
-  public RequestCharSetFilter() {
-      // TODO Auto-generated constructor stub
-  }
+    /**
+     * Default constructor. 
+     */
+    public RequestCharSetFilter() {
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
 	 * @see Filter#destroy()

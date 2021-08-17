@@ -1,25 +1,23 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import="java.util.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib tagdir="/WEB-INF/tags/ch16/lecture" prefix="my"%>
-<%@ taglib tagdir="/WEB-INF/tags/ch16/textbook" prefix="tf"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags/ch16/lecture" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags/ch16/textbook" %>
 
-<%
-	request.setCharacterEncoding("utf-8");
-%>
+<% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
 <html>
 <head>
 
-<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp"%>
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="container">
-<table class="table">
+<div class="container">
+	<table class="table">
 		<thead>
 			<tr>
 				<th>ID</th>
@@ -37,6 +35,7 @@
 			</c:forEach>		
 		</tbody>
 	</table>
+
 	<div class="d-flex justify-content-center mt-3">
 		<nav aria-label="Page navigation example">
 		  <ul class="pagination">
@@ -47,6 +46,17 @@
 		  </ul>
 		</nav>
 	</div>	
-	</div>
+</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

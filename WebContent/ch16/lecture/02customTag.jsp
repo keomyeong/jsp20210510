@@ -1,8 +1,8 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "java.util.*" %>
-<%@ taglib prefix = "c" uri ="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib tagdir = "/WEB-INF/tags/ch16/lecture" prefix = "my"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags/ch16/lecture" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
@@ -10,15 +10,19 @@
 <html>
 <head>
 
-<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
 <title>Insert title here</title>
 </head>
 <body>
-<!-- code -->
-<my:navbar/>
-<div class= "container">
-<h1>nav bar</h1>
+<!--  code  -->
+<my:navbar />
+<div class="container">
+	<h1>nav bar </h1>
 </div>
 </body>
 </html>
+
+
+
+

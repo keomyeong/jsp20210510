@@ -37,3 +37,14 @@ WHERE name = 'lee';
 COMMIT; -- db 반영
 
 SELECT * FROM Table05;
+
+
+
+
+
+
+
+
+
+
+

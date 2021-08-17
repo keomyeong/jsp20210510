@@ -1,6 +1,8 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "java.util.*" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+
 <% request.setCharacterEncoding("utf-8"); %>
+
 <%
 pageContext.setAttribute("pageAttr1", "pageVal1");
 request.setAttribute("reqAttr1", "reqVal1");
@@ -30,9 +32,11 @@ request.setAttribute("comAttr1", "reqVal2");
 	
 	comAttr1(page) : ${pageScope.comAttr1 } <br>
 	comAttr1(req) : ${requestScope.comAttr1 } <br>
-</div> 
+</div>
 </body>
 </html>
+
+
 
 
 

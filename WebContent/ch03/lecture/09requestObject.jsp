@@ -7,22 +7,37 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>requset 객체</h1>
+<h1>request 객체</h1>
 <%
-System.out.println(request);
-out.print(request.getHeader("Host"));
+	System.out.println(request);
+	
+	out.print(request.getHeader("Host"));
 %>
 <br>
-<%=
-request.getHeader("Connection")
-%>
+<%= request.getHeader("Connection") %>
+
 <br>
-<p>요청방식</p>
-<%=
-request.getMethod()
-%>
-<p>요청 url</p>
+<p>요청 방식</p>
+<%= request.getMethod() %>
+
+<p>요청 url </p>
 <%= request.getRequestURI() %>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

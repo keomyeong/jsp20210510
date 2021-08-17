@@ -39,7 +39,6 @@ VALUES
 SELECT * FROM MyTable4;
 
 
-
 -- char(String)
 CREATE TABLE MyTable5
 (
@@ -58,6 +57,7 @@ VALUES
 ('abcde', 'abcde');
 
 SELECT * FROM MyTable5;
+
 -- 
 SET sql_mode = 'PAD_CHAR_TO_FULL_LENGTH';
 SELECT * FROM MyTable5;
@@ -66,7 +66,6 @@ SELECT * FROM MyTable5;
 SET sql_mode = '';
 SELECT * FROM MyTable5;
 -- 'abc', 'abc'
-
 
 -- date, datetime, timestamp
 CREATE TABLE MyTable6
@@ -83,3 +82,22 @@ VALUES
  '2021-06-02 11:07:30');
  SELECT * FROM MyTable6;
  
+-- exercise3
+
+CREATE TABLE Persons
+ (
+  PersonID int,
+  LastName varchar(255),
+  FirstName varchar(255),
+  Address varchar(255),
+  City varchar(255) 
+);
+
+-- exercise4
+DROP TABLE Persons;
+
+
+
+
+
+

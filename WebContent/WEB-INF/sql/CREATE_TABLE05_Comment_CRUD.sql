@@ -1,17 +1,17 @@
-use mytest;
+USE test2;
+
+DROP TABLE IF EXISTS Comment;
 
 CREATE TABLE Comment
 (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	comment VARCHAR(2047) not NULL,
-    memberId VARCHAR(255) not NULL,
-    boardId Int not null,
-    inseted TIMESTAMP DEFAULT now(),
+	comment VARCHAR(2047) NOT NULL,
+    memberId VARCHAR(255) NOT NULL,
+    boardId INT NOT NULL,
+    inserted TIMESTAMP DEFAULT NOW(),
     FOREIGN KEY (memberId) REFERENCES Member(id),
-	FOREIGN KEY (boardid) REFERENCES Board(id)
+    FOREIGN KEY (boardId) REFERENCES Board(id)
 );
--- 테이블이 있으면 드랍 없으면 안함
-DROP Table if EXISTS Comment;
-SELECT * FROM Comment;
-select * FROM Member;
 
+SELECT * FROM Comment;
+SELECT * FROM Member;

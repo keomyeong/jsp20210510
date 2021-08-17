@@ -6,10 +6,18 @@
 <%
 String str = "java";
 %>
-<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
+
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
+
 <title>Insert title here</title>
 </head>
 <body>
+
 <%= str %>
+
+
 </body>
 </html>
+
+
+

@@ -49,3 +49,8 @@ WHERE Likes.userId IS NULL;
 -- 사용자들이 좋아하지 않는 것
 SELECT * FROM Users RIGHT JOIN Likes ON Users.id = Likes.userId
 WHERE Users.id IS NULL;
+
+
+
+
+

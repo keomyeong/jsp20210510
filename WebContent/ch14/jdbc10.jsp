@@ -1,9 +1,9 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "java.util.*" %>
-<%@ taglib prefix = "c" uri ="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix = "fn" uri = "http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib tagdir = "/WEB-INF/tags/ch16/lecture" prefix = "my"%>
-<%@ taglib tagdir = "/WEB-INF/tags/ch16/textbook" prefix = "tf"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags/ch16/lecture" %>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags/ch16/textbook" %>
 
 <% request.setCharacterEncoding("utf-8"); %>
 
@@ -11,13 +11,19 @@
 <html>
 <head>
 
-<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
 <title>Insert title here</title>
 </head>
 <body>
-<div class= "container">
+<div class="container">
 	${customer.city }에 사는 ${customer.name }님 반갑습니다.
 </div>
 </body>
 </html>
+
+
+
+
+
+

@@ -15,7 +15,6 @@
 <body>
 
 <%
-//134-139 187-189 책
 Page p = new Page(3, 10);
 request.setAttribute("page", p);
 
@@ -37,3 +36,9 @@ System.out.println(e);
 </div>
 </body>
 </html>
+
+
+
+
+
+

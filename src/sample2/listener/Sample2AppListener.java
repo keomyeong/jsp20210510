@@ -31,7 +31,16 @@ public class Sample2AppListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
+    	
     	TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
+    	
     }
 	
 }
+
+
+
+
+
+
+

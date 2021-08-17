@@ -1,4 +1,4 @@
-USE mytest;
+USE test2;
 DESC Member;
 
 ALTER TABLE Member
@@ -22,6 +22,12 @@ VALUES
 ('donald', 'trump', 'trump', '2011-01-01');
 
 SELECT * FROM Member;
+
+
+
+
+
+
 
 
 

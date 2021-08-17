@@ -1,6 +1,6 @@
 package sample2.dao;
 
-import java.sql.Connection;	
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -10,6 +10,7 @@ import sample2.bean.Comment;
 import sample2.util.DBConnection;
 
 public class CommentDao {
+
 	public void insert(Comment commentBean, Connection con) {
 		String sql = "INSERT INTO Comment (memberId, boardId, comment) "
 				+ "   VALUES (?, ?, ?)";
@@ -29,13 +30,14 @@ public class CommentDao {
 		}
 		
 	}
+
 	public List<Comment> list(int boardId, Connection con) {
 		List<Comment> list = new ArrayList<>();
 		
 		String sql = "SELECT c.id commentId,"
 				+ "          m.id memberId,"
 				+ "          m.name memberName,"
-				+ "          c.inseted inserted,"
+				+ "          c.inserted inserted,"
 				+ "          c.comment comment,"
 				+ "          c.boardId boardId "
 				+ "   FROM Comment c JOIN Member m ON c.memberId = m.id "
@@ -90,6 +92,7 @@ public class CommentDao {
 		
 		
 	}
+
 	public void remove(int id, Connection con) {
 		String sql = "DELETE FROM Comment WHERE id = ?";
 		
@@ -106,5 +109,41 @@ public class CommentDao {
 		
 		
 	}
+
+	public int getNumberOfComment(String id, Connection con) {
+		String sql = "SELECT COUNT(*) FROM Comment WHERE memberId = ? ";
+		
+		ResultSet rs = null;
+		
+		try (
+			PreparedStatement pstmt = con.prepareStatement(sql);
+				) {
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBConnection.close(rs);
+		}
+		
+		
+		return 0;
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+

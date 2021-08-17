@@ -17,6 +17,7 @@ INSERT INTO Customers
 (CustomerID, CustomerName, ContactName)
 VALUES
 (95, 'Back', 'Seoul');
+
 INSERT INTO Customers
 (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES
@@ -25,5 +26,9 @@ VALUES
 --  테이블 설명 보기
 DESC Customers;
 DESC Employees;
+
 SELECT * FROM Employees
 ORDER BY EmployeeID DESC;
+
+
+

@@ -1,17 +1,20 @@
-<%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "java.util.*" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page import="java.util.*" %>
+
 <% request.setCharacterEncoding("utf-8"); %>
+
 <%
 pageContext.setAttribute("a", "50");
 pageContext.setAttribute("b", "30");
 
-
+pageContext.setAttribute("d", "abc");
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
 
-<%@ include  file = "/WEB-INF/subModules/bootstrapHeader.jsp" %>
+<%@ include file="/WEB-INF/subModules/bootstrapHeader.jsp" %>
 
 <title>Insert title here</title>
 </head>
@@ -37,3 +40,8 @@ pageContext.setAttribute("b", "30");
 </div>
 </body>
 </html>
+
+
+
+
+

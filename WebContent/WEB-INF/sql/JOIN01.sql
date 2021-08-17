@@ -1,45 +1,55 @@
-use test;
-create table Table01
+USE test;
+
+CREATE TABLE Table01
 (
- id int PRIMARY key AUTO_INCREMENT,
- name VARCHAR(255),
- bookId INT
-);
-create table Table02
-(
- id int PRIMARY key AUTO_INCREMENT,
- bookname VARCHAR(255)
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255),
+    bookId INT
 );
 
+CREATE TABLE Table02
+(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    bookName VARCHAR(255)
+);
+
 INSERT INTO Table01
 (name, bookId)
-VALUES('kim', 1);
+VALUES ('kim', 1);
+
 INSERT INTO Table01
 (name, bookId)
-VALUES('lee', 2);
+VALUES ('lee', 2);
+
 INSERT INTO Table01
 (name, bookId)
-VALUES('choi', 3);
+VALUES ('choi', 3);
+
 INSERT INTO Table01
 (name, bookId)
-VALUES('park', 4);
+VALUES ('park', 4);
 
 INSERT INTO Table02
-(bookname)
-VALUES('book1');
-INSERT INTO Table02
-(bookname)
-VALUES('book2');
-INSERT INTO Table02
-(bookname)
-VALUES('book3');
-INSERT INTO Table02
-(bookname)
-VALUES('book4');
+(bookName)
+VALUES ('book1');
 
-SELECT * FROM Table01;
-SELECT * FROM Table02;
-SELECT * FROM Table01, Table02;
+INSERT INTO Table02
+(bookName)
+VALUES ('book2');
+
+INSERT INTO Table02
+(bookName)
+VALUES ('book3');
+
+INSERT INTO Table02
+(bookName)
+VALUES ('book4');
+
+SELECT * FROM Table01; -- 4개 record
+
+SELECT * FROM Table02; -- 4개 record
+
+SELECT * FROM Table01, Table02; -- 16개 record
 
 -- join
 SELECT * FROM
@@ -76,5 +86,18 @@ t2.bookName bname
 FROM
 Table01 t1 JOIN Table02 t2
 On t1.bookId = t2.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
